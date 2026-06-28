@@ -25,8 +25,8 @@ def get_llm(model: str = None, streaming: bool = False, temperature: float = Non
     if use_groq():
         from langchain_groq import ChatGroq
         chat = ChatGroq(
-            model=settings.GROQ_MODEL,
-            api_key=settings.GROQ_API_KEY,
+            model=settings.groq_model_clean,
+            api_key=settings.groq_api_key_clean,
             temperature=temp,
         )
         return chat | StrOutputParser()
@@ -127,8 +127,8 @@ async def check_llm_health() -> dict:
         return {
             "status":        "healthy",
             "provider":      "groq",
-            "models":        [settings.GROQ_MODEL],
-            "current_model": settings.GROQ_MODEL,
+            "models":        [settings.groq_model_clean],
+            "current_model": settings.groq_model_clean,
         }
     return await check_ollama_health()
 
@@ -162,7 +162,7 @@ async def check_ollama_health() -> dict:
 async def list_available_models() -> list:
     """Fetch available models (Groq model when configured, else Ollama)."""
     if use_groq():
-        return [settings.GROQ_MODEL]
+        return [settings.groq_model_clean]
     try:
         async with httpx.AsyncClient() as client:
             response = await client.get(

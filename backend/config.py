@@ -24,6 +24,12 @@ class Settings(BaseSettings):
 
     # Groq (fast, free hosted inference). When GROQ_API_KEY is set, chat uses
     # Groq instead of Ollama. Get a free key at https://console.groq.com
+    @property
+    def groq_api_key_clean(self): return self.GROQ_API_KEY.strip()
+    
+    @property
+    def groq_model_clean(self): return self.GROQ_MODEL.strip()
+
     GROQ_API_KEY: str = ""
     GROQ_MODEL:   str = "llama-3.1-8b-instant"
 
