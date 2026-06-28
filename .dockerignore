@@ -1,0 +1,12 @@
+.git/
+venv/
+frontend/
+screenshots/
+**/__pycache__/
+*.pyc
+*.log
+backend/chroma_db/
+backend/uploads/
+backend/*.db
+backend/*.db-shm
+backend/*.db-wal
