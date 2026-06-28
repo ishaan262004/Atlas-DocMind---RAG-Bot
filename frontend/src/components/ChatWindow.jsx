@@ -1050,10 +1050,6 @@ function WelcomeScreen({ onSuggestion }) {
                 flexDirection: "column",
                 gap: "8px",
                 textAlign: "left",
-                background: "#111111",
-                border: "1px solid #242424",
-                borderRadius: "8px",
-                cursor: "pointer",
               }}
             >
               {/* Icon */}
