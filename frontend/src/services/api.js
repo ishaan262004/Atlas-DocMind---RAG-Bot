@@ -66,7 +66,7 @@ export async function sendChatMessage({
   const payload = {
     message,
     session_id,
-    model: model || "llama3",
+    model: model || "llama-3.3-70b-versatile",
     stream: stream,
   };
 
