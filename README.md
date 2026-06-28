@@ -32,20 +32,20 @@ Atlas Docmind is a full-stack AI assistant focused on **long-term memory**. Unli
 
 ## Features
 
-### 🧠 Persistent memory (the core)
+###  Persistent memory (the core)
 - **Cross-session recall** — memories are scoped per user (`client_id`) and recalled in every chat
 - **LLM extraction** — facts are extracted with category + confidence, then **de-duplicated** on write
 - **Provenance** — each memory shows the message it came from
 - **Editable memory panel** — inline edit, search, and category filters
 - Backed by **Postgres** (facts) + **pgvector** (semantic search)
 
-### 📄 Document chat (RAG)
+###  Document chat (RAG)
 - Upload **PDF, DOCX, CSV, TXT, MD**
 - Chunking → embeddings (`all-MiniLM-L6-v2`) → pgvector
 - **Inline citations** — see exactly which source/page answered
 - MMR retrieval (with similarity fallback)
 
-### 💬 Premium chat UX
+###  Premium chat UX
 - **Streaming** replies with a natural **typewriter** reveal
 - **Stop / Regenerate / Edit-and-resend**
 - **Syntax-highlighted code blocks** with copy buttons
@@ -53,11 +53,11 @@ Atlas Docmind is a full-stack AI assistant focused on **long-term memory**. Unli
 - **Search conversations**, **export to Markdown**
 - **Conversation summarization** keeps long chats coherent
 
-### 🎙️ Voice & settings
+###  Voice & settings
 - **Voice input** (speech-to-text) and **read-aloud** replies (TTS) + auto-speak
 - **Settings**: temperature, **persona presets** (Concise / Mentor / Creative) + custom system prompt
 
-### 🎨 Design
+###  Design
 - Luxury dark SaaS aesthetic — cinematic boot sequence, floating rounded panels, indigo/gold design system, aurora backdrops, glass message bubbles — tuned to stay **smooth** (GPU-composited, no scroll jank)
 
 ---
