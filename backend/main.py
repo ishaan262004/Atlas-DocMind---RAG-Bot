@@ -90,6 +90,19 @@ app.include_router(upload.router, tags=["Documents"])
 app.include_router(memory.router, tags=["Memory"])
 
 
+from fastapi import Request
+from fastapi.responses import JSONResponse
+import traceback
+
+@app.exception_handler(Exception)
+async def global_exception_handler(request: Request, exc: Exception):
+    logger.error(f"Global exception: {exc}")
+    logger.error(traceback.format_exc())
+    return JSONResponse(
+        status_code=500,
+        content={"detail": str(exc), "traceback": traceback.format_exc()}
+    )
+
 @app.get("/")
 async def root():
     return {
