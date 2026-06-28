@@ -123,6 +123,15 @@ async def health_check():
         "cache": cache_status(),
     }
 
+from fastapi.responses import PlainTextResponse
+@app.get("/debug-logs", response_class=PlainTextResponse)
+async def debug_logs():
+    try:
+        with open("/tmp/app.log", "r") as f:
+            return f.read()
+    except Exception as e:
+        return f"Log read failed: {e}"
+
 
 if __name__ == "__main__":
     import uvicorn

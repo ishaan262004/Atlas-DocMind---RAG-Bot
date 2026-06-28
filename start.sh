@@ -15,4 +15,4 @@ if [ -z "$GROQ_API_KEY" ]; then
 fi
 
 cd backend
-exec uvicorn main:app --host 0.0.0.0 --port 7860
+exec uvicorn main:app --host 0.0.0.0 --port 7860 2>&1 | tee /tmp/app.log
