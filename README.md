@@ -1,13 +1,3 @@
----
-title: Atlas Docmind
-emoji: 🧠
-colorFrom: indigo
-colorTo: purple
-sdk: docker
-app_port: 7860
-pinned: false
-license: mit
----
 
 # Atlas Docmind
 
@@ -173,10 +163,3 @@ All requests carry an `X-Client-Id` header that scopes data per browser/user.
 
 ---
 
-## License
-
-MIT — see [LICENSE](LICENSE).
-
-<div align="center">
-Built with ❤️ — Atlas Docmind: fast, memory-driven enterprise AI.
-</div>
