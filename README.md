@@ -1,4 +1,16 @@
+---
+title: Atlas Docmind
+emoji: 🧠
+colorFrom: indigo
+colorTo: purple
+sdk: docker
+app_port: 7860
+pinned: false
+license: mit
+---
+
 # Atlas Docmind
+
 
 > A premium enterprise AI platform that **remembers you across sessions**, answers questions from **your documents**, and replies in an instant — powered by **Groq**, with durable **Supabase** storage.
 
