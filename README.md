@@ -66,20 +66,20 @@ Atlas Docmind is a full-stack AI assistant focused on **long-term memory**. Unli
 
 ```text
 ┌──────────────────────────────────────────────────────────────┐
-│                  FRONTEND  (React + Vite + Tailwind)          │
-│   ChatWindow · MemoryPanel · Sidebar · Settings · Voice       │
+│                  FRONTEND  (React + Vite + Tailwind)         │
+│   ChatWindow · MemoryPanel · Sidebar · Settings · Voice      │
 └───────────────────────────┬──────────────────────────────────┘
                             │  HTTP / SSE  (X-Client-Id)
                             ▼
 ┌──────────────────────────────────────────────────────────────┐
-│                   BACKEND  (FastAPI + LangChain)              │
-│   /chat (SSE)   /upload   /memory   /health                   │
-│                                                               │
-│   ┌──────────────┐   ┌───────────────┐   ┌────────────────┐   │
-│   │ Groq LLM     │   │ Local CPU      │   │  Supabase      │   │
-│   │ Llama 3.3 70B│   │ embeddings     │   │  Postgres +    │   │
-│   │ (streaming)  │   │ (MiniLM-L6)    │   │  pgvector      │   │
-│   └──────────────┘   └───────────────┘   └────────────────┘   │
+│                   BACKEND  (FastAPI + LangChain)             │
+│   /chat (SSE)   /upload   /memory   /health                  │
+│                                                              │
+│   ┌──────────────┐   ┌───────────────┐   ┌────────────────┐  │
+│   │ Groq LLM     │   │ Local CPU     │   │  Supabase      │  │
+│   │ Llama 3.3 70B│   │ embeddings    │   │  Postgres +    │  │
+│   │ (streaming)  │   │ (MiniLM-L6)   │   │  pgvector      │  │
+│   └──────────────┘   └───────────────┘   └────────────────┘  │
 └──────────────────────────────────────────────────────────────┘
 ```
 
@@ -109,7 +109,7 @@ When `DATABASE_URL` is **not** set, the backend falls back to local **SQLite + C
 | Variable | Required | Description |
 | --- | --- | --- |
 | `GROQ_API_KEY` | ✅ | Free key from [console.groq.com](https://console.groq.com) |
-| `DATABASE_URL` | ⛅ recommended | Supabase Postgres **session-pooler** URI. Unset → local SQLite. |
+| `DATABASE_URL` | Supabase Postgres **session-pooler** URI. Unset → local SQLite. |
 | `GROQ_MODEL` | optional | Defaults to `llama-3.3-70b-versatile` |
 | `CORS_ORIGINS` | optional | Comma-separated allowed origins (defaults to `*`) |
 
