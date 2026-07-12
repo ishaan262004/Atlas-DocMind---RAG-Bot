@@ -12,7 +12,6 @@
 [![Groq](https://img.shields.io/badge/Groq-LPU_Inference-F55036?style=flat-square)](https://groq.com)
 [![LangChain](https://img.shields.io/badge/LangChain-0.2-1C3C3C?style=flat-square&logo=langchain&logoColor=white)](https://langchain.com)
 [![Supabase](https://img.shields.io/badge/Supabase-Postgres_+_pgvector-3FCF8E?style=flat-square&logo=supabase&logoColor=white)](https://supabase.com)
-[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 
 </div>
 
